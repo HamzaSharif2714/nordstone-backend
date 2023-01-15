@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 mongoose.set("strictQuery", false);
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect("https://nordstone.up.railway.app", {
   useNewUrlParser: true,
 });
 app.use(cors());
