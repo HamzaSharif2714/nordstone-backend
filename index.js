@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
+const port = process.env.PORT || 3000;
 mongoose.set("strictQuery", false);
 // Connect to MongoDB
 mongoose.connect("mongodb://localhost:27017/nordstone", {
@@ -55,6 +56,6 @@ app.post("/calculate", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server listening on port 3000");
 });
